@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:webadmin/layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "admin",
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,pageTransitionsTheme: PageTransitionsTheme(builders: {ta})
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Colors.blue,
       ),
-      home: Container(),
+      home: SiteLayout(),
     );
   }
 }
