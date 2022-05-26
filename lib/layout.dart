@@ -12,6 +12,6 @@ class SiteLayout extends StatelessWidget {
           elevation: 0,
           backgroundColor: Colors.white,
         ),
-        body: SmallScreen());
+        body: const SmallScreen());
   }
 }
