@@ -17,6 +17,7 @@ class SiteLayout extends StatelessWidget {
         smallScreen: SmallScreen(),
         mediumScreen: LargeScreen(),
       ),
+      drawer: Drawer(),
     );
   }
 }
