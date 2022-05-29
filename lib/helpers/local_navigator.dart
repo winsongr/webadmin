@@ -5,6 +5,6 @@ import 'package:webadmin/routings/routes.dart';
 
 Navigator localNavigator() => Navigator(
       key: navigationController.navigationKey,
-      initialRoute: overViewPageRoute,
+      initialRoute: overViewPageName,
       onGenerateRoute: generateRoute,
     );

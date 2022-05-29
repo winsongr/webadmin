@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:webadmin/constants/controllers.dart';
 import 'package:webadmin/helpers/responsiveness.dart';
+import 'package:webadmin/pages/overview/widgets/available_drivers.dart';
 import 'package:webadmin/pages/overview/widgets/overview_card_large.dart';
 import 'package:webadmin/pages/overview/widgets/overview_card_medium.dart';
 import 'package:webadmin/pages/overview/widgets/overview_cards_small.dart';
 import 'package:webadmin/pages/overview/widgets/revenue_section_large.dart';
+import 'package:webadmin/pages/overview/widgets/revenue_section_small.dart';
 import 'package:webadmin/widgets/custom_text.dart';
 
 class OverViewPage extends StatelessWidget {
@@ -41,9 +43,11 @@ class OverViewPage extends StatelessWidget {
                 const OverviewCardsLargeScreen()
             else
               const OverviewCardsSmallScreen(),
-
-              
-            const RevenueSectionLarge()
+            if (!ResponsiveWidget.isSmallScreen(context))
+              const RevenueSectionLarge()
+            else
+              const RevenueSectionSmall(),
+            AvailableDrivers()
           ],
         ))
       ],

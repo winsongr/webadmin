@@ -5,7 +5,7 @@ import 'package:webadmin/routings/routes.dart';
 
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
-  var activeItem = overViewPageRoute.obs;
+  var activeItem = overViewPageName.obs;
   var hoverItem = "".obs;
 
   changeActiveitemTo(String itemName) {
@@ -21,13 +21,13 @@ class MenuController extends GetxController {
 
   Widget returnIconFor(String itemName) {
     switch (itemName) {
-      case overViewPageRoute:
+      case overViewPageName:
         return _customIcon(Icons.trending_up, itemName);
-      case driversPageRoute:
+      case driversPageName:
         return _customIcon(Icons.drive_eta, itemName);
-      case clientsPageRoute:
+      case clientsPageName:
         return _customIcon(Icons.people_alt_outlined, itemName);
-      case authenticationPageRoute:
+      case authenticationPageName:
         return _customIcon(Icons.exit_to_app, itemName);
 
       default:

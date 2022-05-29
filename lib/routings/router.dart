@@ -6,15 +6,15 @@ import 'package:webadmin/routings/routes.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case overViewPageRoute:
-      return _getPageRoute(OverViewPage());
-    case driversPageRoute:
-      return _getPageRoute(DriversPage());
-    case clientsPageRoute:
-      return _getPageRoute(ClientsPage());
+    case overViewPageName:
+      return _getPageRoute(const OverViewPage());
+    case driversPageName:
+      return _getPageRoute(const DriversPage());
+    case clientsPageName:
+      return _getPageRoute(const ClientsPage());
 
     default:
-      return _getPageRoute(OverViewPage());
+      return _getPageRoute(const OverViewPage());
   }
 }
 

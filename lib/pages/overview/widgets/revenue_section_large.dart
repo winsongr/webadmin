@@ -8,7 +8,6 @@ class RevenueSectionLarge extends StatelessWidget {
   const RevenueSectionLarge({
     Key? key,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,53 +22,66 @@ class RevenueSectionLarge extends StatelessWidget {
               blurRadius: 12),
         ],
         border: Border.all(color: lightGrey, width: .5),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              children: [
-                CustomText(
-                  text: "Revenue Chart",
-                  size: 20,
-                  weight: FontWeight.bold,
-                  color: lightGrey,
-                ),
-                SizedBox(
-                  width: 600,
-                  height: 200,
-                  child: SimpleBarChart.withSampleData(),
-                ),
-                Container(width: 1, height: 120, color: lightGrey),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Row(
-                        children: const [
-                          RevenueInfo(title: "Today's revenue", amount: "23"),
-                          RevenueInfo(
-                              title: "last 7days revenue", amount: "213"),
+        borderRadius: BorderRadius.circular(8),),
+
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          CustomText(
+                            text: "Revenue Chart",
+                            size: 20,
+                            weight: FontWeight.bold,
+                            color: lightGrey,
+                          ),
+                          SizedBox(
+                              width: 600,
+                              height: 200,
+                              child: SimpleBarChart.withSampleData()),
                         ],
                       ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Row(
-                        children: const [
-                          RevenueInfo(title: "Last 30 days", amount: "2322"),
-                          RevenueInfo(title: "last 2 months", amount: "2613"),
+                    ),
+                    Container(
+                      width: 1,
+                      height: 120,
+                      color: lightGrey,
+                    ),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(
+                            children: const [
+                              RevenueInfo(
+                                title: "Toda\'s revenue",
+                                amount: "230",
+                              ),
+                              RevenueInfo(
+                                title: "Last 7 days",
+                                amount: "1,100",
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 30,),
+                          Row(
+                            children: const [
+                              RevenueInfo(
+                                title: "Last 30 days",
+                                amount: "3,230",
+                              ),
+                              RevenueInfo(
+                                title: "Last 12 months",
+                                amount: "11,300",
+                              ),
+                            ],
+                          ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
+              );
   }
 }
